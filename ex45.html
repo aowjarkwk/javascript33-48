@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>문서객체 선택 연습문제</title>
+    <script>
+        //연습문제1
+        //a태그의 html내용을 "앵커태그 선택됨"으로 바꾸시오.
+        window.onload = function () {
+            var anchor = document.getElementById('anchor');
+            anchor.innerHTML = "앵커태그 선택됨.";
+            var ptag = document.getElementsByTagName('p');
+            ptag[0].innerHTML = "문단태그-1";
+            ptag[1].innerHTML = "문단태그-2";
+            var header3 = document.getElementsByTagName('h3');
+            for (h of header3) {
+                h.innerHTML = "헤더태그 h3선택됨.";
+            };
+        }
+    
+
+
+    //연습문제2
+    //p태그의 html내용을 각각 "문단태그-1" "문단태그-2"로 바꾸시오.
+
+    //연습문제3
+    //h3태그의 html내용을 "헤더태그 h3선택됨."으로 바꾸시오.
+    </script>
+</head>
+
+<body>
+    <div>
+        <a id="anchor" href="#">앵커태그</a>
+        <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ducimus obcaecati saepe
+            aspernatur sint tempora sequi facere neque totam, exercitationem ratione itaque. Cum, sapiente ipsa aliquid
+            dicta necessitatibus voluptatibus fugit?</p>
+        <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ducimus obcaecati saepe
+            aspernatur sint tempora sequi facere neque totam, exercitationem ratione itaque. Cum, sapiente ipsa aliquid
+            dicta necessitatibus voluptatibus fugit?</p>
+        <h3>header h3</h3>
+    </div>
+</body>
+
+</html>

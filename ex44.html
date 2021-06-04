@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML 문서 객체 찾기</title>
+    <script>
+    //문서 객체 모델(DOM: Document Object Model)
+    //모델 : 데이타
+    //웹브라우저가 HTML문서를 로딩후에, 내부적인 문서 객체 모델(데이타구조-트리)
+    //으로 관리하는 데이타구조.
+    //문서객체 요소 가져오기
+    //getElementById(idName) : id로 문서객체 찾기
+    //getElementsByClassName(className) : class로 문서객체찾기. 배열반환
+    //getElementsByTagName(tagName) : tag로 문서객체찾기. 배열반환.
+        window.onload = function(){
+            //id로 찾기 - 객체변수로 반환
+            var header1 = document.getElementById('header-1');
+            header1.innerHTML = "h1 찾음.";
+            //class로 찾기 - 배열로 반환
+            var array_header2 = document.getElementsByClassName('header-h2');
+            for(var h2 of array_header2){
+                h2.innerHTML = "h2 찾음";
+            }
+            //tag로 찾기 - 배열로 반환
+            var array_h1tag = document.getElementsByTagName('h1');
+            for(var h1 of array_h1tag){
+                h1.innerHTML = "h1 tag 찾음"
+            }
+        };
+
+    </script>
+</head>
+
+<body>
+    <h1 id="header-1">헤더 1</h1>
+    <h1 id="header-2">헤더 2</h1>
+    <h2 class="header-h2">헤더 3</h2>
+    <h2 class="header-h2">헤더 4</h2>
+    <h2 class="header-h2">헤더 5</h2>
+</body>
+
+</html>

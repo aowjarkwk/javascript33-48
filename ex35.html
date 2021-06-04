@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>함수의 중급기법 - 함수형 변수</title>
+    <script>
+    //프로그래밍 언어의 세대별 차이 
+    //1세대언어 : 절차형 언어 - C언어/어셈블리어/포트란/코볼
+    //2세대언어 : 객체지향 언어 - 자바/C#/ObjectiveC - 클래스기반
+    //3세대언어 : 함수형 언어 - JS/파이썬/Go/Swift/Kortlin
+
+    //함수 : 코드모음(뭉치, 블럭)이다.
+    //함수(코드뭉치)를 변수로 만들어 보자! => 함수형 언어!
+    //코드뭉치를 변수로 만들어서 매개변수로 전달할 수 있다~!
+    //비동기처리 - 코드의 해석시점과 실행시점을 시간차를 다르게 한다.
+    //이벤트발생시 - 통신(요청/응답), 유저이벤트(마우스클릭,버튼클릭)
+
+    // 일반함수
+    function myFunc(){
+        console.log("일반함수 호출됨.");
+        return;
+    }
+    myFunc();
+    // 함수형 변수(익명함수)
+    var callback = function( param ){
+        console.log("callback함수 실행됨." + param);
+        // return; // 생략가능
+    }
+    callback(10);
+
+    // 함수형변수를 매개변수로 전달해보자
+    function myFunc2( param_func ){
+        param_func(20);
+    }
+    myFunc2(callback);
+
+    // ES6 (ECMA Script 6)에서 화살표 연산자를 지원함.
+    var callback2 = ( param ) =>{
+        console.log("callback2실행됨" + param );
+    }
+    myFunc2(callback2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML body에 출력하기</title>
+    <script>
+        document.write("<h1>Hello World!</h1>");
+        // 그림과 같이 테이블을 출력하시오.
+        var str_table = "<table border=1>";
+        str_table += "<tr>";
+        str_table += "<td>번호</td>";
+        str_table += "<td>이름</td>";
+        str_table += "<td>나이</td>";
+        str_table += "</tr>";
+        str_table += "<tr>";
+        str_table += "<td>1</td>";
+        str_table += "<td>" + "춘향이" + "</td>";
+        str_table += "<td>30</td>";
+        str_table += "</tr>";
+        str_table += "<tr>";
+        str_table += "<td>2</td>";
+        str_table += "<td>변사또</td>";
+        str_table += "<td>40</td>";
+        str_table += "</tr>";
+        str_table += "</table>";
+        document.write(str_table);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

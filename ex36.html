@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>타이머 관련 함수</title>
+    <script>
+        // setTimeout : 일정시간 후에 1회 수행
+        // setInterval : 일정시간마다 주기적 수행
+
+        // 3초후에 실행되는 함수
+        var timer = setTimeout(
+            function(){ //익명함수
+                console.log("3초가 지났습니다.");
+            },
+            3000 //ms = 3s
+        );
+        // 타이머를 지울때
+        clearTimeout(timer); //바로 지웠기 때문에 3초후에 호출안됨.
+
+        //2초간격으로 실행되는 코드
+        var interval = setInterval(
+            function(){
+                console.log( new Date()); // new 예약어 - 객체생성
+            },2000
+        );
+        // 인터벌을 지울때
+        clearInterval(interval);
+
+        // 연습문제
+        // 1.3초 후에 say hello를 호출하시오~
+        var timer = setTimeout(
+            function(){
+                console.log("say hello~");
+            },3000
+        );
+        // 2. 5초마다 say world!를 출력하시오~
+        var interval = setInterval(
+            function(){
+                console.log("say world!");
+            },5000
+        );
+        setTimeout(() => {
+            
+        }, timeout);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

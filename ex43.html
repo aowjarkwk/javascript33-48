@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>innerHTML과 innerText</title>
+    <script>
+        // innerHTML:HTML태그로 인식하도록 제어함.
+        // innerTEXT:단순 텍스트로 인식하도록 제어함.
+        window.onload = function(){
+            // 자바스크립트에서 문서 객체 선택
+            var h1_innerHTML = document.getElementById('innerHTML');
+            h1_innerHTML.innerHTML ="<ins>new innerHTML</ins>";
+            var h1_innerTEXT = document.getElementById('innerTEXT');
+            h1_innerTEXT.innerText="<ins>new innerHTML</ins>";
+        };
+
+    </script>
+</head>
+<body>
+    <h1 id="innerHTML">innerHTML</h1>
+    <h1 id="innerTEXT">innerTEXT</h1>
+</body>
+</html>

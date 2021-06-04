@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>문서객체선택 - CSS선택자</title>
+    <script>
+        
+        window.onload = function () {
+        // querySelector()함수 : CSS선택자를 이용한 객체선택 
+            var header1 = document.querySelector('#header-1');
+            var header2 = document.querySelector('#header-2');
+            header1.innerHTML = "Header1 선택됨";
+            header2.innerHTML = "Header2 선택됨";
+            header1.style.color = 'green';
+            header2.style.color = 'orange';
+        // querySelectorAll() : CSS선택자로 객체배열 선택
+        // tag이름으로
+            var array_h1 = document.querySelectorAll('h1');
+            for( var h1 of array_h1 ){
+                h1.style.backgroundColor = 'cyan';
+            }
+        // class이름으로
+            var array_h1_class = document.querySelectorAll('.headers');
+            for (var h1 of array_h1_class){
+                h1.innerHTML = 'class로 선택됨.';
+            }
+
+               //연습문제
+      //문제1. id가 wrap인 div밑의 h1의 텍스트색상을 white로 바꾸시오.
+      //문서객체.style.coler = 'white'
+        var i = document.querySelector('#wrap>div>h1');
+            i.style.color = 'white';
+      //문제2. Header3 color를 blue으로 변경하시오.
+      //문서객체.style.color = 'blue';
+        var h3 = document.querySelector('h1:nth-of-type(3)');
+            h3.style.color = 'blue';
+      //문제3. Header4 color를 orange으로 변경하시오.
+      //문서객체.style.color = 'orange';
+        var h4 = document.querySelector('h1:nth-of-type(4)');
+            h4.style.color='orange';
+      //문제4. id wrap인 div의 border를 1px solid red로 바꾸시오.
+        var wrap = document.querySelector('#wrap');
+            wrap.style.border='1px solid red';
+        };
+    </script>
+</head>
+
+<body>
+    <h1 id="header-1">Header1</h1>
+    <h1 id="header-2">Header2</h1>
+    <h1 class="headers">Header3</h1>
+    <h1 class="headers">Header4</h1>
+    <h1 class="headers">Header5</h1>
+    <div id="wrap">
+        <div>
+            <h1>Wrapper</h1>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>onload함수</title>
+    <script>
+        //onload함수 : HTML문서가 다 로딩완료시 호출됨.
+        // 브라우저가 문서를 로딩할 때 시간이 필요함.(200ms)
+        // 로딩 중간에 스크립트를 실행하면 오류가 발생함.
+        // 문서 로딩 이벤트 후에 스크립트를 실행해야 됨.
+        window.onload = function(){
+        document.body.innerHTML += "<h1>HTML문서로딩완료</h1>";        
+        };
+    </script>
+</head>
+<body>
+    <h1>문서 로딩 중 ...</h1>
+</body>
+</html>

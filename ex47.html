@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>마우스클릭 이벤트</title>
+    <script>
+        //마우스 클릭 이벤트
+        window.onload = function(){
+            var header1 = document.getElementById('header1');
+            header1.onclick = function(){
+                alert("header1 클릭됨");
+            };
+
+            var header2 = document.getElementById('header2');
+            header2.addEventListener("click", function(){
+                alert("header2 클릭됨");
+            });
+        };
+        // 함수를 만들어놓고 클릭4에 넣기
+        function myFunc( param ){
+            alert("myFunc호출됨."+param);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header1">Click1</h1>
+    <h1 id="header2">Click2</h1>
+
+    <!-- inline 자바스크립트 함수호출 -->
+    <h1 onclick="alert('클릭됨.')">Click3</h1>
+    <h1 onclick="myFunc(10);">Click4</h1>
+</body>
+</html>
